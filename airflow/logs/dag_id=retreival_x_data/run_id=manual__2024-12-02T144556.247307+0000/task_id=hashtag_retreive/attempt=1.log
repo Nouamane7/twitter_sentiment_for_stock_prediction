@@ -1,0 +1,35 @@
+[2024-12-02T14:46:03.147+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-02T14:46:03.164+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: retreival_x_data.hashtag_retreive manual__2024-12-02T14:45:56.247307+00:00 [queued]>
+[2024-12-02T14:46:03.173+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: retreival_x_data.hashtag_retreive manual__2024-12-02T14:45:56.247307+00:00 [queued]>
+[2024-12-02T14:46:03.173+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-12-02T14:46:03.186+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): hashtag_retreive> on 2024-12-02 14:45:56.247307+00:00
+[2024-12-02T14:46:03.196+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=500) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-02T14:46:03.199+0000] {standard_task_runner.py:72} INFO - Started process 503 to run task
+[2024-12-02T14:46:03.199+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'retreival_x_data', 'hashtag_retreive', 'manual__2024-12-02T14:45:56.247307+00:00', '--job-id', '104', '--raw', '--subdir', 'DAGS_FOLDER/retreive_data.py', '--cfg-path', '/tmp/tmpkq223x62']
+[2024-12-02T14:46:03.200+0000] {standard_task_runner.py:105} INFO - Job 104: Subtask hashtag_retreive
+[2024-12-02T14:46:03.259+0000] {task_command.py:467} INFO - Running <TaskInstance: retreival_x_data.hashtag_retreive manual__2024-12-02T14:45:56.247307+00:00 [running]> on host 3903981c8fb7
+[2024-12-02T14:46:03.328+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='nou' AIRFLOW_CTX_DAG_ID='retreival_x_data' AIRFLOW_CTX_TASK_ID='hashtag_retreive' AIRFLOW_CTX_EXECUTION_DATE='2024-12-02T14:45:56.247307+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-02T14:45:56.247307+00:00'
+[2024-12-02T14:46:03.329+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-12-02T14:46:03.329+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-12-02T14:46:03.330+0000] {logging_mixin.py:190} INFO - Current task name:hashtag_retreive state:running start_date:2024-12-02 14:46:03.164912+00:00
+[2024-12-02T14:46:03.330+0000] {logging_mixin.py:190} INFO - Dag name:retreival_x_data and current dag run status:running
+[2024-12-02T14:46:03.330+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-02T14:46:03.331+0000] {logging_mixin.py:190} INFO - finsihed task
+[2024-12-02T14:50:01.601+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2024-12-02T14:50:01.670+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2024-12-02T14:50:01.705+0000] {process_utils.py:132} INFO - Sending 15 to group 503. PIDs of all processes in the group: [505, 530, 533, 618, 638, 672, 720, 756, 826, 503]
+[2024-12-02T14:50:01.710+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 503
+[2024-12-02T14:50:01.747+0000] {taskinstance.py:3093} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-12-02T14:50:01.866+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=533, status='terminated', started='14:46:04') (533) terminated with exit code None
+[2024-12-02T14:50:01.877+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=720, status='terminated', started='14:46:07') (720) terminated with exit code None
+[2024-12-02T14:50:01.879+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=638, status='terminated', started='14:46:06') (638) terminated with exit code None
+[2024-12-02T14:50:01.886+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=756, status='terminated', started='14:46:09') (756) terminated with exit code None
+[2024-12-02T14:50:01.889+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=618, status='terminated', started='14:46:05') (618) terminated with exit code None
+[2024-12-02T14:50:01.890+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=505, status='terminated', started='14:46:02') (505) terminated with exit code None
+[2024-12-02T14:50:02.023+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=530, status='terminated', started='14:46:04') (530) terminated with exit code None
+[2024-12-02T14:50:02.024+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=826, status='terminated', started='14:46:26') (826) terminated with exit code None
+[2024-12-02T14:50:02.385+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-02T14:50:02.558+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=503, status='terminated', exitcode=0, started='14:46:02') (503) terminated with exit code 0
+[2024-12-02T14:50:02.559+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=672, status='terminated', started='14:46:06') (672) terminated with exit code None

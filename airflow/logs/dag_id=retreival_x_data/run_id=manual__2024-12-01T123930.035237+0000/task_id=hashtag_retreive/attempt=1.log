@@ -1,0 +1,31 @@
+[2024-12-01T12:39:32.107+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-01T12:39:32.119+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: retreival_x_data.hashtag_retreive manual__2024-12-01T12:39:30.035237+00:00 [queued]>
+[2024-12-01T12:39:32.126+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: retreival_x_data.hashtag_retreive manual__2024-12-01T12:39:30.035237+00:00 [queued]>
+[2024-12-01T12:39:32.127+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2024-12-01T12:39:32.142+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): hashtag_retreive> on 2024-12-01 12:39:30.035237+00:00
+[2024-12-01T12:39:32.150+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=912) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-01T12:39:32.151+0000] {standard_task_runner.py:72} INFO - Started process 914 to run task
+[2024-12-01T12:39:32.151+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'retreival_x_data', 'hashtag_retreive', 'manual__2024-12-01T12:39:30.035237+00:00', '--job-id', '62', '--raw', '--subdir', 'DAGS_FOLDER/retreive_data.py', '--cfg-path', '/tmp/tmpdji6ex2b']
+[2024-12-01T12:39:32.152+0000] {standard_task_runner.py:105} INFO - Job 62: Subtask hashtag_retreive
+[2024-12-01T12:39:32.189+0000] {task_command.py:467} INFO - Running <TaskInstance: retreival_x_data.hashtag_retreive manual__2024-12-01T12:39:30.035237+00:00 [running]> on host e824da4198b6
+[2024-12-01T12:39:32.255+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='nou' AIRFLOW_CTX_DAG_ID='retreival_x_data' AIRFLOW_CTX_TASK_ID='hashtag_retreive' AIRFLOW_CTX_EXECUTION_DATE='2024-12-01T12:39:30.035237+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-01T12:39:30.035237+00:00'
+[2024-12-01T12:39:32.256+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-12-01T12:39:32.257+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-12-01T12:39:32.257+0000] {logging_mixin.py:190} INFO - Current task name:hashtag_retreive state:running start_date:2024-12-01 12:39:32.120588+00:00
+[2024-12-01T12:39:32.258+0000] {logging_mixin.py:190} INFO - Dag name:retreival_x_data and current dag run status:running
+[2024-12-01T12:39:32.258+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-01T12:39:32.284+0000] {logging_mixin.py:190} INFO - CompletedProcess(args=['python', '/dags/selenium_twitter_scraper_master/scraper', 'ht==stocks'], returncode=2, stdout='', stderr="python: can't open file '/dags/selenium_twitter_scraper_master/scraper': [Errno 2] No such file or directory\n")
+[2024-12-01T12:39:32.285+0000] {logging_mixin.py:190} INFO - python: can't open file '/dags/selenium_twitter_scraper_master/scraper': [Errno 2] No such file or directory
+[2024-12-01T12:39:32.285+0000] {logging_mixin.py:190} INFO - rer
+[2024-12-01T12:39:32.285+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-12-01T12:39:32.294+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-01T12:39:32.294+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=retreival_x_data, task_id=hashtag_retreive, run_id=manual__2024-12-01T12:39:30.035237+00:00, execution_date=20241201T123930, start_date=20241201T123932, end_date=20241201T123932
+[2024-12-01T12:39:32.302+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-12-01T12:39:32.303+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-12-01T12:39:32.304+0000] {logging_mixin.py:190} INFO - Dag name:retreival_x_data queued_at:2024-12-01 12:39:30.095716+00:00
+[2024-12-01T12:39:32.304+0000] {logging_mixin.py:190} INFO - Task hostname:e824da4198b6 operator:PythonOperator
+[2024-12-01T12:39:32.326+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-01T12:39:32.340+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-01T12:39:32.342+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
